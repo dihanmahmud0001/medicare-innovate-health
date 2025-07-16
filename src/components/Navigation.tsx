@@ -15,7 +15,7 @@ const Navigation = () => {
     <nav className="bg-primary text-primary-foreground shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-sm sm:text-xl font-bold truncate">
+          <Link to="/" className="text-xs sm:text-xl font-bold">
             Medicare Pharmaceuticals
           </Link>
           
@@ -34,16 +34,22 @@ const Navigation = () => {
               <Link to="/medicines">Medicines</Link>
             </Button>
             <Button 
-              variant={isActive("/employees") ? "secondary" : "ghost"} 
+              variant={isActive("/about") ? "secondary" : "ghost"} 
               asChild
             >
-              <Link to="/employees">Employees</Link>
+              <Link to="/about">About Us</Link>
             </Button>
             <Button 
               variant={isActive("/research") ? "secondary" : "ghost"} 
               asChild
             >
               <Link to="/research">Research & Projects</Link>
+            </Button>
+            <Button 
+              variant={isActive("/join-research") ? "secondary" : "ghost"} 
+              asChild
+            >
+              <Link to="/join-research">Join our research</Link>
             </Button>
           </div>
 
@@ -79,12 +85,12 @@ const Navigation = () => {
                 <Link to="/medicines">Medicines</Link>
               </Button>
               <Button 
-                variant={isActive("/employees") ? "secondary" : "ghost"} 
+                variant={isActive("/about") ? "secondary" : "ghost"} 
                 asChild
                 className="w-full justify-start"
                 onClick={toggleMenu}
               >
-                <Link to="/employees">Employees</Link>
+                <Link to="/about">About Us</Link>
               </Button>
               <Button 
                 variant={isActive("/research") ? "secondary" : "ghost"} 
@@ -93,6 +99,14 @@ const Navigation = () => {
                 onClick={toggleMenu}
               >
                 <Link to="/research">Research & Projects</Link>
+              </Button>
+              <Button 
+                variant={isActive("/join-research") ? "secondary" : "ghost"} 
+                asChild
+                className="w-full justify-start"
+                onClick={toggleMenu}
+              >
+                <Link to="/join-research">Join our research</Link>
               </Button>
             </div>
           </div>
